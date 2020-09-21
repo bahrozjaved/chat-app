@@ -1,0 +1,43 @@
+body{
+    background: url(images.jpg);
+}
+
+.box{
+    margin-top: 100px;
+    -webkit-box-shadow: 8px 10px 17px 13px rgba(212, 208, 208, 0.75);
+-moz-box-shadow: 8px 10px 17px 13px rgba(224, 220, 220, 0.75);
+box-shadow: 8px 10px 17px 13px rgba(216, 212, 212, 0.75);
+height: 500px;
+
+}
+
+.test{
+    
+    color: #cfd9dd;
+    font-size: 30px;
+}
+
+
+
+.button {
+    
+    margin-top: 10px;
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+    background-color: #1b6861;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 9px #999;
+    text-decoration: none;
+    border: none;
+    outline:none;
+  }
+  button:focus {
+    border: none;
+    outline: none;
+}
+  .button:hover {background-color: #050505}
+  

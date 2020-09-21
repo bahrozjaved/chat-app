@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Application</title>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="icon" href="fav.png" type="image/gif" sizes="16x16">
+    		    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="new.css">
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+          apiKey: "AIzaSyCj2VqMEgqJEXpxLakeS4mh6uJHlkHGCL0",
+          authDomain: "social-auth-419c3.firebaseapp.com",
+          databaseURL: "https://social-auth-419c3.firebaseio.com",
+          projectId: "social-auth-419c3",
+          storageBucket: "social-auth-419c3.appspot.com",
+          messagingSenderId: "755092647435",
+          appId: "1:755092647435:web:17ff94e0a2cab0c729210e",
+          measurementId: "G-XLDT99VFNS"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+       
+      </script>
+
+
+</head>
+
+<body>
+
+  <div class="container-fluid h-100">
+    <div class="row justify-content-center ">
+          <div class="col-sm-1 col-md-4" ></div>
+          <div class="col-sm-10 col-md-4  text-center"  >
+              <img src="logo.png" alt="nologo" height="120">
+              <h5 class="text-center test"> First login using facebook then continue</h1>
+                  <button onclick="facebook_login()" class="button ">Facebook Login</button>
+          </div>
+          <div class="col-sm-1 col-md-4" ></div>
+      
+  
+  
+      </div>
+      <div class="row justify-content-center h-80">
+  <div class="col-md-4 col-xl-3 chat"><div class="card mb-sm-3 mb-md-0 contacts_card">
+    <div class="card-header">
+      <div class="input-group">
+                      <div class="img_cont">
+                          <img src="logo.png" class="rounded-circle user_img">
+                      </div>
+                      <div class="user_info">
+                          <span>Members in Room </span>
+                         
+                      </div>
+                  </div>
+    </div>
+    <div class="card-body contacts_body">
+      <ui class="contacts">
+      <li class="active">
+        <div class="d-flex bd-highlight">
+          <div class="img_cont">
+            <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img">
+            </div>
+          <div class="user_info">
+            <span>Khalid</span>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="d-flex bd-highlight">
+          <div class="img_cont">
+            <img src="https://2.bp.blogspot.com/-8ytYF7cfPkQ/WkPe1-rtrcI/AAAAAAAAGqU/FGfTDVgkcIwmOTtjLka51vineFBExJuSACLcBGAs/s320/31.jpg" class="rounded-circle user_img">
+          </div>
+          <div class="user_info">
+            <span>Taherah Big</span>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="d-flex bd-highlight">
+          <div class="img_cont">
+            <img src="https://i.pinimg.com/originals/ac/b9/90/acb990190ca1ddbb9b20db303375bb58.jpg" class="rounded-circle user_img">
+          </div>
+          <div class="user_info">
+            <span>Sami Rafi</span>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="d-flex bd-highlight">
+          <div class="img_cont">
+            <img src="https://static.turbosquid.com/Preview/001214/650/2V/boy-cartoon-3D-model_D.jpg" class="rounded-circle user_img">
+          </div>
+          <div class="user_info">
+            <span>Nargis Hawa</span>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="d-flex bd-highlight">
+          <div class="img_cont">
+            <img src="https://static.turbosquid.com/Preview/001214/650/2V/boy-cartoon-3D-model_D.jpg" class="rounded-circle user_img">
+          </div>
+          <div class="user_info">
+            <span>Rashid Samim</span>
+          </div>
+        </div>
+      </li>
+      </ui>
+    </div>
+    <div class="card-footer"></div>
+  </div></div>
+  <div class="col-md-8 col-xl-6 chat">
+    <div class="card">
+      <div class="card-header msg_head">
+        <div class="d-flex bd-highlight">
+          <div class="img_cont">
+            <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img">
+            <span class="online_icon"></span>
+          </div>
+          <div class="user_info">
+            <span>Room Chat</span>
+          </div>
+        </div>
+        
+      </div>
+      <div class="card-body msg_card_body">
+        <div class="d-flex justify-content-start mb-4">
+          <div class="img_cont_msg">
+            <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img_msg">
+          </div>
+          <div class="msg_cotainer">
+            Hi, how are you samim?
+            <span class="msg_time">8:40 AM, Today</span>
+          </div>
+        </div>
+        <div class="d-flex justify-content-end mb-4">
+          <div class="msg_cotainer_send">
+            Hi Khalid i am good tnx how about you?
+            <span class="msg_time_send">8:55 AM, Today</span>
+          </div>
+          <div class="img_cont_msg">
+        <img src="logo.png" class="rounded-circle user_img_msg">
+          </div>
+        </div>
+        <div class="d-flex justify-content-start mb-4">
+          <div class="img_cont_msg">
+            <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img_msg">
+          </div>
+          <div class="msg_cotainer">
+            I am good too, thank you for your chat template
+            <span class="msg_time">9:00 AM, Today</span>
+          </div>
+        </div>
+        <div class="d-flex justify-content-end mb-4">
+          <div class="msg_cotainer_send">
+            You are welcome
+            <span class="msg_time_send">9:05 AM, Today</span>
+          </div>
+          <div class="img_cont_msg">
+        <img src="logo.png" class="rounded-circle user_img_msg">
+          </div>
+        </div>
+        <div class="d-flex justify-content-start mb-4">
+          <div class="img_cont_msg">
+            <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img_msg">
+          </div>
+          <div class="msg_cotainer">
+            I am looking for your next templates
+            <span class="msg_time">9:07 AM, Today</span>
+          </div>
+        </div>
+        <div class="d-flex justify-content-end mb-4">
+          <div class="msg_cotainer_send">
+            Ok, thank you have a good day
+            <span class="msg_time_send">9:10 AM, Today</span>
+          </div>
+          <div class="img_cont_msg">
+      <img src="logo.png" class="rounded-circle user_img_msg">
+          </div>
+        </div>
+        <div class="d-flex justify-content-start mb-4">
+          <div class="img_cont_msg">
+            <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img_msg">
+          </div>
+          <div class="msg_cotainer">
+            Bye, see you
+            <span class="msg_time">9:12 AM, Today</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="input-group">
+          <div class="input-group-append">
+            <span class="input-group-text attach_btn"><i class="fas fa-paperclip"></i></span>
+          </div>
+          <textarea name="" class="form-control type_msg" placeholder="Type your message..."></textarea>
+          <div class="input-group-append">
+            <span class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+  
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
