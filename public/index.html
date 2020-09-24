@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Chat Application</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
+    <link rel="icon" href="fav.png" type="image/gif" sizes="16x16">
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+    <script>
+        var firebaseConfig = {
+          apiKey: "AIzaSyCj2VqMEgqJEXpxLakeS4mh6uJHlkHGCL0",
+          authDomain: "social-auth-419c3.firebaseapp.com",
+          databaseURL: "https://social-auth-419c3.firebaseio.com",
+          projectId: "social-auth-419c3",
+          storageBucket: "social-auth-419c3.appspot.com",
+          messagingSenderId: "755092647435",
+          appId: "1:755092647435:web:17ff94e0a2cab0c729210e",
+          measurementId: "G-XLDT99VFNS"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      </script>
+</head>
+<body >
+
+
+      
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 col-md-12" > 
+        <div class="head">Firebase Chat Application Using Facebook Authentication
+    </br>
+    <button onclick="facebook_login()" class="button ">Facebook Login</button>
+    <button onclick="signout()" class="button ">logout</button>
+    </div>
+        </div>  
+      </div>
+    
+    <div class="row">
+      <div class="col-sm-1 col-md-4" ></div>
+      <div class="col-sm-10 col-md-4 " >
+
+        <div class="chat">
+          <div class="chat-header">
+              <img src="logo.png" alt="no logo" height="100px" width="130px">
+          </br>
+              Firebase Facebook Chat App 
+          </div>
+          <div class="chat-window">
+              <ul id="messages">
+      
+      </ul>
+              <form id="messageform" >
+                  
+                <!-- <textarea placeholder="Enter the Message"  type="text" id="msg-input" cols="40" rows="2"></textarea>
+                -->
+                <input type="text" placeholder="Enter the Message" name="" id="msg-input" >
+                  <button id="msg-btn" >send</button>
+                      </form>  
+          </div>                  
+</div>
+</div>    
+    </div>
+      <div class="col-sm-1 col-md-4" ></div>
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/node-uuid/1.4.8/uuid.min.js" integrity="sha512-rV0Q1QWodkoLjts/qP2XHtjvUPTmN46k4eH0lzOR3mDui8a0YnL/uqydipXA9mQ2wG6J4imL0BO6/26rcFho7Q==" crossorigin="anonymous"></script>
+<script src="app.js" ></script>
+</body>
+</html>
